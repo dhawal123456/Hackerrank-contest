@@ -1,0 +1,20 @@
+#include<iostream>
+#include<unordered_set>
+using namespace std;
+unordered_set<int> e;
+
+int main()
+{
+    int a,b,c,d=0;
+    cin>>a>>b;
+    for (int i=0;i<a;i++)
+    {
+        cin>>c;
+        e.insert(c);
+    }
+    for (unordered_set<int>::iterator f=e.begin();f!=e.end();++f)
+        if (e.find(*f+b)!=e.end()) 
+            d++;
+    cout<<d<<endl;
+    return 0;
+}
